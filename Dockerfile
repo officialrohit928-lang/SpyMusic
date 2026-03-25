@@ -1,7 +1,9 @@
 FROM python:3.10-slim-bookworm
 
-# Install Node.js (LTS)
-RUN apt-get update && apt-get install -y curl ffmpeg \
+RUN apt-get update && apt-get install -y \
+    curl \
+    ffmpeg \
+    git \
     && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
     && apt-get clean \
